@@ -29,6 +29,15 @@
     .changelog-entry h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
     .changelog-entry .date { opacity: 0.5; font-size: 0.85rem; margin-bottom: 0.5rem; }
     .changelog-entry ul { margin-bottom: 0; }
+    .screenshot {
+      display: block; max-width: 100%; border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+      margin: 1rem 0 1.5rem;
+    }
+    .screenshot-caption {
+      font-size: 0.85rem; opacity: 0.5; text-align: center;
+      margin-top: -0.75rem; margin-bottom: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -45,8 +54,10 @@
     <ol class="steps">
       <li>Install the extension from Firefox Add-ons.</li>
       <li>Add sites you find distracting to your blocklist.</li>
+      <img class="screenshot" src="images/blocked-sites.png" alt="Blocked Sites panel showing a blocklist with facebook.com and twitter.com" width="600" height="310">
       <li>When you visit a blocked site, you'll see a random motivational message reminding you to focus.</li>
       <li>Optionally set a schedule so sites are only blocked during work hours.</li>
+      <img class="screenshot" src="images/schedule.png" alt="Schedule panel with weekday selection and 9 AM to 5 PM time range" width="600" height="330">
     </ol>
 
     <h2>Features</h2>
@@ -58,6 +69,9 @@
       <li>Light, dark, and auto theme modes</li>
       <li>Zero data collection — everything stays on your device</li>
     </ul>
+
+    <img class="screenshot" src="images/apperance.png" alt="Appearance settings with Auto, Light, and Dark theme toggle and style dropdown" width="600" height="340">
+    <p class="screenshot-caption">Customize the look with themes and light/dark modes</p>
 
     <h2>Changelog</h2>
 

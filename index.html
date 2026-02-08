@@ -23,42 +23,26 @@
     .subtitle { font-size: 1.1rem; opacity: 0.6; margin-bottom: 3rem; }
 
     .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .actions + .actions { margin-top: 1.5rem; }
-
-    .footer {
-      position: fixed; bottom: 1.5rem; font-size: 0.85rem; opacity: 0.4;
-      display: flex; gap: 1.5rem; align-items: center;
-    }
-    .footer a { color: inherit; text-decoration: underline; }
-    .footer .sep { opacity: 0.3; }
   </style>
 </head>
-<body class="light">
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">Auto</button>
-
+<body>
   <div class="container">
     <div id="message"></div>
     <p class="subtitle">distracted.work</p>
     <div class="actions">
       <button class="btn btn-primary" id="newMessage">Another One</button>
-      <button class="btn btn-secondary" id="closeTab">Close This Tab</button>
-    </div>
-    <div class="actions">
       <a class="btn btn-extension" href="install.html">Get the Firefox Extension</a>
     </div>
   </div>
 
-  <div class="footer">
-    <a href="privacy.html">Privacy</a>
-    <span class="sep">|</span>
-    <a href="install.html">Install</a>
-    <span class="sep">|</span>
-    <a href="contact.html">Contact</a>
-    <span class="sep">|</span>
-    <span>Made by <a href="https://adamwhitlock.com" target="_blank">Adam Whitlock</a></span>
-  </div>
+  <footer class="site-footer" style="position: fixed; bottom: 0; left: 0; right: 0; margin-top: 0; border-top: none;">
+    <a href="privacy.html">Privacy</a> &middot;
+    <a href="install.html">Install</a> &middot;
+    <a href="contact.html">Contact</a> &middot;
+    Made with care by <a href="https://adamwhitlock.com" target="_blank">Adam Whitlock</a>
+    <a class="coffee-link" href="https://ko-fi.com/adamwhitlock" target="_blank" rel="noopener">(buy him a coffee)</a>
+  </footer>
 
-  <script src="theme.js"></script>
   <script>
     var MESSAGES = [
       "Oops, you did it again.",
@@ -125,9 +109,6 @@
     document.addEventListener('DOMContentLoaded', function () {
       displayMessage();
       document.getElementById('newMessage').addEventListener('click', displayMessage);
-      document.getElementById('closeTab').addEventListener('click', function () {
-        window.close();
-      });
     });
   </script>
 </body>

@@ -31,6 +31,71 @@ a { color: #4361ee; }
 .page p, .page ul, .page ol { margin-bottom: 1rem; }
 .page ul, .page ol { padding-left: 1.5rem; }
 .page .updated { opacity: 0.5; margin-bottom: 2rem; font-size: 0.9rem; }
+.page .lead { font-size: 1.08rem; color: #444; }
+
+.info-box {
+  background: rgba(67, 97, 238, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+.info-box p:last-child { margin-bottom: 0; }
+
+.download-box { text-align: center; }
+.coming-soon {
+  display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px;
+  font-size: 1rem; font-weight: 600; opacity: 0.5;
+  border: 2px dashed currentColor;
+}
+
+.steps { counter-reset: step; list-style: none; padding-left: 0; }
+.steps li {
+  counter-increment: step;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0.1rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  background: #4361ee; color: #fff; font-weight: 700; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.media-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.75rem 0 0.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  background: #e9ecef;
+}
+.media-frame.ratio-wide { aspect-ratio: 16 / 9; }
+.media-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+.media-caption {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.changelog-entry { margin-bottom: 2rem; }
+.changelog-entry h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+.changelog-entry .date { opacity: 0.5; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.changelog-entry ul { margin-bottom: 0; }
+
+.strong-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
 
 /* Code blocks */
 .page pre {

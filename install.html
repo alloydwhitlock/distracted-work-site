@@ -6,46 +6,13 @@
   <title>Install | distracted.work</title>
   <meta name="description" content="Install the Distracted Work browser extension for Firefox.">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .download-box {
-      background: rgba(67, 97, 238, 0.08); border-radius: 12px;
-      padding: 2rem; text-align: center; margin: 2rem 0;
-    }
-    .download-box p { margin-bottom: 1rem; font-size: 1.1rem; }
-    .coming-soon {
-      display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px;
-      font-size: 1rem; font-weight: 600; opacity: 0.5;
-      border: 2px dashed currentColor;
-    }
-    .steps { counter-reset: step; list-style: none; padding-left: 0; }
-    .steps li { counter-increment: step; margin-bottom: 1.5rem; padding-left: 2.5rem; position: relative; }
-    .steps li::before {
-      content: counter(step); position: absolute; left: 0; top: -0.1rem;
-      width: 1.8rem; height: 1.8rem; border-radius: 50%;
-      background: #4361ee; color: #fff; font-weight: 700; font-size: 0.85rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .changelog-entry { margin-bottom: 2rem; }
-    .changelog-entry h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
-    .changelog-entry .date { opacity: 0.5; font-size: 0.85rem; margin-bottom: 0.5rem; }
-    .changelog-entry ul { margin-bottom: 0; }
-    .screenshot {
-      display: block; max-width: 100%; border-radius: 10px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-      margin: 1rem 0 1.5rem;
-    }
-    .screenshot-caption {
-      font-size: 0.85rem; opacity: 0.5; text-align: center;
-      margin-top: -0.75rem; margin-bottom: 1.5rem;
-    }
-  </style>
 </head>
 <body>
-  <main class="page" style="padding-top: 3rem;">
+  <main class="page">
     <h1>Install</h1>
-    <p>Distracted Work is a browser extension that blocks distracting websites and reminds you to get back to work.</p>
+    <p class="lead">Distracted Work is a browser extension that blocks distracting websites and reminds you to get back to work.</p>
 
-    <div class="download-box">
+    <div class="info-box download-box">
       <p>Firefox Add-on</p>
       <span class="coming-soon">Coming soon...</span>
     </div>
@@ -53,11 +20,19 @@
     <h2>How It Works</h2>
     <ol class="steps">
       <li>Install the extension from Firefox Add-ons.</li>
-      <li>Add sites you find distracting to your blocklist.</li>
-      <img class="screenshot" src="images/blocked-sites.png" alt="Blocked Sites panel showing a blocklist with facebook.com and twitter.com" width="600" height="310">
+      <li>
+        Add sites you find distracting to your blocklist.
+        <figure class="media-frame ratio-wide">
+          <img src="images/blocked-sites.png" alt="Blocked Sites panel showing a blocklist with facebook.com and twitter.com" width="1216" height="614">
+        </figure>
+      </li>
       <li>When you visit a blocked site, you'll see a random motivational message reminding you to focus.</li>
-      <li>Optionally set a schedule so sites are only blocked during work hours.</li>
-      <img class="screenshot" src="images/schedule.png" alt="Schedule panel with weekday selection and 9 AM to 5 PM time range" width="600" height="330">
+      <li>
+        Optionally set a schedule so sites are only blocked during work hours.
+        <figure class="media-frame ratio-wide">
+          <img src="images/schedule.png" alt="Schedule panel with weekday selection and 9 AM to 5 PM time range" width="1214" height="642">
+        </figure>
+      </li>
     </ol>
 
     <h2>Features</h2>
@@ -70,8 +45,10 @@
       <li>Zero data collection — everything stays on your device</li>
     </ul>
 
-    <img class="screenshot" src="images/apperance.png" alt="Appearance settings with Auto, Light, and Dark theme toggle and style dropdown" width="600" height="340">
-    <p class="screenshot-caption">Customize the look with themes and light/dark modes</p>
+    <figure class="media-frame ratio-wide">
+      <img src="images/apperance.png" alt="Appearance settings with Auto, Light, and Dark theme toggle and style dropdown" width="1214" height="670">
+    </figure>
+    <p class="media-caption">Customize the look with themes and light/dark modes</p>
 
     <h2>Open Source</h2>
     <p>Distracted Work is open source. You can browse the code, clone the repo, or open an issue on GitHub.</p>
@@ -96,6 +73,7 @@
 
   <footer class="site-footer">
     <a href="/">Home</a> &middot;
+    <a href="install.html">Install</a> &middot;
     <a href="privacy.html">Privacy</a> &middot;
     <a href="contact.html">Contact</a> &middot;
     Made with care by <a href="https://adamwhitlock.com" target="_blank">Adam Whitlock</a>

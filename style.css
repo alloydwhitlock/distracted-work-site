@@ -32,6 +32,16 @@ a { color: #4361ee; }
 .page ul, .page ol { padding-left: 1.5rem; }
 .page .updated { opacity: 0.5; margin-bottom: 2rem; font-size: 0.9rem; }
 
+/* Code blocks */
+.page pre {
+  background: rgba(67, 97, 238, 0.08); border-radius: 8px;
+  padding: 1rem 1.25rem; overflow-x: auto; margin-bottom: 1rem;
+}
+.page pre code {
+  font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.85rem;
+}
+
 /* Footer */
 .site-footer {
   text-align: center; padding: 2rem 1.5rem; margin-top: 3rem;

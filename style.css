@@ -41,11 +41,44 @@ a { color: #4361ee; }
 }
 .info-box p:last-child { margin-bottom: 0; }
 
-.download-box { text-align: center; }
-.coming-soon {
-  display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px;
-  font-size: 1rem; font-weight: 600; opacity: 0.5;
-  border: 2px dashed currentColor;
+/* Download hero CTA */
+.download-hero {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(255, 107, 53, 0.03));
+  border: 1px solid rgba(255, 107, 53, 0.18);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.download-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.55;
+  margin-bottom: 1rem;
+}
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.15rem;
+  border-radius: 10px;
+}
+.btn-extension:hover {
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+}
+.btn-arrow {
+  display: inline-block;
+  margin-left: 0.4rem;
+  transition: transform 0.15s;
+}
+.btn-extension:hover .btn-arrow {
+  transform: translateX(3px);
+}
+.download-meta {
+  font-size: 0.82rem;
+  opacity: 0.45;
+  margin-top: 0.85rem;
+  margin-bottom: 0;
 }
 
 .steps { counter-reset: step; list-style: none; padding-left: 0; }

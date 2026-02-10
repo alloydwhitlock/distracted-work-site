@@ -44,40 +44,46 @@ a { color: #4361ee; }
 /* Download hero CTA */
 .download-hero {
   text-align: center;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(255, 107, 53, 0.03));
-  border: 1px solid rgba(255, 107, 53, 0.18);
+  background: linear-gradient(145deg, #ff6b35, #e85d26);
   border-radius: 16px;
-  padding: 2rem 1.5rem;
-  margin: 1.5rem 0;
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.25);
+  color: #fff;
 }
 .download-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.55;
-  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
 }
 .btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1.15rem;
-  border-radius: 10px;
+  padding: 1.1rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
 }
-.btn-extension:hover {
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+.download-hero .btn-extension {
+  background: #fff;
+  color: #e85d26;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.download-hero .btn-extension:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
 }
 .btn-arrow {
   display: inline-block;
   margin-left: 0.4rem;
   transition: transform 0.15s;
 }
-.btn-extension:hover .btn-arrow {
-  transform: translateX(3px);
+.download-hero .btn-extension:hover .btn-arrow {
+  transform: translateX(4px);
 }
 .download-meta {
   font-size: 0.82rem;
-  opacity: 0.45;
-  margin-top: 0.85rem;
+  opacity: 0.7;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 

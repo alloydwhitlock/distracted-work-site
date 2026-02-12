@@ -9,3 +9,4 @@ node_modules/
 # Local tooling and temp artifacts
 .playwright-cli/
 output/
+.claude

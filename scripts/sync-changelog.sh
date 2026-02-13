@@ -4,7 +4,7 @@ set -euo pipefail
 REPO="alloydwhitlock/distracted-work-mozilla-extension"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-INSTALL_HTML="$ROOT_DIR/install.html"
+TARGET_HTML="$ROOT_DIR/opensource.html"
 OVERRIDES="$SCRIPT_DIR/changelog-overrides.json"
 
 # --- helpers ---
@@ -107,9 +107,9 @@ while IFS= read -r release_line; do
 
 done < <(echo "$releases_json" | jq -c '.')
 
-# --- splice into install.html ---
+# --- splice into opensource.html ---
 
-echo "Updating $INSTALL_HTML..."
+echo "Updating $TARGET_HTML..."
 
 # Build the replacement block
 replacement="    <!-- CHANGELOG_START -->\n${changelog_html}\n    <!-- CHANGELOG_END -->"
@@ -128,10 +128,10 @@ awk -v replacement="$replacement" '
     next
   }
   !found_start { print }
-' "$INSTALL_HTML" > "$INSTALL_HTML.tmp"
+' "$TARGET_HTML" > "$TARGET_HTML.tmp"
 
-mv "$INSTALL_HTML.tmp" "$INSTALL_HTML"
+mv "$TARGET_HTML.tmp" "$TARGET_HTML"
 
 # Count entries
-entry_count=$(grep -c 'class="changelog-entry"' "$INSTALL_HTML")
+entry_count=$(grep -c 'class="changelog-entry"' "$TARGET_HTML")
 echo "Done. $entry_count changelog entries written."

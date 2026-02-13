@@ -91,7 +91,9 @@
     // Update style swatches
     var swatches = fabPanel.querySelectorAll('[data-style]');
     swatches.forEach(function (sw) {
-      sw.classList.toggle('active', sw.getAttribute('data-style') === currentStyle);
+      var isActive = sw.getAttribute('data-style') === currentStyle;
+      sw.classList.toggle('active', isActive);
+      sw.setAttribute('aria-checked', isActive ? 'true' : 'false');
     });
     // Update FAB button accent
     if (fabBtn) {
@@ -103,7 +105,7 @@
   function togglePanel() {
     isOpen = !isOpen;
     fabPanel.classList.toggle('open', isOpen);
-    fabBtn.setAttribute('aria-expanded', isOpen);
+    fabBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
 
   function closePanel() {
@@ -122,12 +124,14 @@
     fabBtn.className = 'theme-fab-btn';
     fabBtn.setAttribute('aria-label', 'Change theme');
     fabBtn.setAttribute('aria-expanded', 'false');
+    fabBtn.setAttribute('aria-controls', 'theme-panel');
     fabBtn.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2"/><circle cx="17.5" cy="10.5" r="2"/><circle cx="8.5" cy="7.5" r="2"/><circle cx="6.5" cy="12" r="2"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.7-.7 1.7-1.5 0-.4-.2-.7-.4-1-.2-.3-.3-.6-.3-1 0-.8.7-1.5 1.5-1.5H16c3.3 0 6-2.7 6-6 0-5.5-4.5-10-10-10z"/></svg>';
     fabBtn.addEventListener('click', togglePanel);
 
     // Panel
     fabPanel = document.createElement('div');
     fabPanel.className = 'theme-fab-panel';
+    fabPanel.id = 'theme-panel';
 
     // Mode buttons
     var modeRow = document.createElement('div');
@@ -156,6 +160,7 @@
       swatch.setAttribute('data-style', theme.id);
       swatch.setAttribute('role', 'radio');
       swatch.setAttribute('aria-label', theme.name);
+      swatch.setAttribute('aria-checked', 'false');
       swatch.setAttribute('title', theme.name);
       swatch.style.backgroundColor = theme.accent;
       swatch.addEventListener('click', function () {

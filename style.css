@@ -201,9 +201,17 @@ a { color: var(--accent); }
 .theme-swatch {
   width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent;
   cursor: pointer; transition: transform 0.15s, border-color 0.15s;
-  padding: 0;
+  padding: 0; position: relative;
 }
 .theme-swatch:hover { transform: scale(1.15); }
+.theme-swatch:hover::after {
+  content: attr(title);
+  position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+  background: var(--text, #333); color: var(--bg, #fff);
+  font-size: 0.7rem; font-weight: 600; white-space: nowrap;
+  padding: 0.2rem 0.5rem; border-radius: 4px;
+  margin-bottom: 4px; pointer-events: none;
+}
 .theme-swatch.active {
   border-color: var(--text, #333);
   box-shadow: 0 0 0 2px var(--bg, #fff);
